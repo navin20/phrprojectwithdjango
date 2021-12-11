@@ -17,6 +17,5 @@ class  Doctor(models.Model):
     age = models.IntegerField(default= 0)
     blood = models.CharField(max_length=10)
     username = models.OneToOneField(User,on_delete = models.CASCADE)
-    # status = models.BooleanField(default = 0)
     department = models.CharField(max_length=30 , default = "")
     salary = models.IntegerField(default = 10000)
