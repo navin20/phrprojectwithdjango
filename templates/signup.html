@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <style type="text/css">
+		.container {
+			margin-top: 30px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		h2 {
+			padding-top: 50px;
+		}
+
+		p {
+			font-size: 17px !important;
+		}
+		body{
+			background-color: green;;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+
+		
+		} 
+
+        </style>
+        </head>
+
+<body>
+{% include "navigation.html"  %}
+
+<form action="/signup" method="POST">
+	{% csrf_token %}
+ 	<input type="text" name="first_name" placeholder="First_Name" required="" class="form-control"><br>
+	 <input type="text" name="last_name" placeholder="Last_Name" required="" class="form-control"><br>
+ 	<input type="text" name="username" placeholder="Userame" required="" class="form-control"><br>
+     <input type="text" name="id_card_number" placeholder="idcardnumber" required="" class="form-control"><br>
+ 	<input type="email" name="email" placeholder="Email" required="" class="form-control"><br>
+ 	<input type="tel" name="phone_number" placeholder="Phone Number" required="" class="form-control"><br>
+ 	<input type="password" name="password" placeholder="Password" required="" class="form-control"><br>
+
+<input type = submit >
+
+
+</form>
+
+</body>
